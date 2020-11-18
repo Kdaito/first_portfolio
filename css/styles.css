@@ -1,0 +1,529 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 9px;
+}
+
+body {
+  font-family: "Noto Sans JP";
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-title {
+  padding: 1.3rem 0;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+}
+
+.section-title h2::first-letter {
+  color: salmon;
+}
+
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  border: solid 2px salmon;
+  width: 60%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.fadeIn {
+  -webkit-transition: 1s;
+  transition: 1s;
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+}
+
+.fadeIn.animated {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+header {
+  padding: 4rem 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header h1 {
+  color: #fff;
+  font-size: 3rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin: 0 auto;
+}
+
+header .nav-items {
+  display: none;
+}
+
+header.sticky {
+  padding: 2rem 2rem;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+header.sticky h1 {
+  font-size: 2.5rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header.sticky a {
+  font-size: 1rem;
+}
+
+.heading {
+  padding-top: 5rem;
+  height: 100vh;
+  width: 100%;
+  background-image: url(../img/heading.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.heading i {
+  font-size: 15rem;
+}
+
+.heading h2 {
+  font-family: "Modak", cursive;
+  font-size: 5rem;
+}
+
+.heading p {
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+  font-weight: 600;
+}
+
+.profile {
+  padding: 4rem 0 8rem;
+  background: #000;
+}
+
+.profile .profile-container {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+.profile .profile-container .img-wrapper {
+  margin: 2rem auto;
+  width: 23rem;
+  height: 23rem;
+}
+
+.profile .profile-container .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile .profile-container .profile-text {
+  color: #fff;
+  margin: 0 auto;
+}
+
+.profile .profile-container .profile-text h3 {
+  text-align: center;
+  letter-spacing: 0.4rem;
+  font-size: 3rem;
+  position: relative;
+}
+
+.profile .profile-container .profile-text h3::after {
+  content: "";
+  position: absolute;
+  border: solid 1.5px #444;
+  width: 40%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.profile .profile-container .profile-text h4 {
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: 0.2rem;
+  padding-bottom: 1.5rem;
+}
+
+.profile .profile-container .profile-text p {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.hobby {
+  width: 100%;
+  padding: 4rem 0;
+  background-image: url(../img/hobby.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 10%;
+}
+
+.hobby .hobby-container {
+  padding-top: 2rem;
+  width: 70%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+
+.hobby .hobby-container .hobby-content {
+  width: 80%;
+  height: 15rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.hobby .hobby-container .hobby-content h3 {
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 3rem;
+}
+
+.hobby .hobby-container .hobby-content p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+.vision {
+  padding: 5.5rem 0 5rem;
+  background: #000;
+  color: #fff;
+  width: 100%;
+}
+
+.vision .vision-texts {
+  padding-top: 2.6rem;
+  text-align: center;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.vision .vision-texts h3 {
+  color: salmon;
+  font-size: 2rem;
+  line-height: 4rem;
+  padding-bottom: 0.5rem;
+}
+
+.vision .vision-texts p {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+.vision .vision-texts p:nth-child(7) {
+  padding-top: 2rem;
+}
+
+.contact {
+  background-image: url(../img/header.jfif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 4rem;
+}
+
+.contact .contact-container {
+  width: 85%;
+  margin: 2rem auto 0;
+  padding: 5rem 4rem;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.contact .contact-container .contact-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .contact-container .contact-row .input-wrapper {
+  width: 100%;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.contact .contact-container .contact-row .input-wrapper .input-data {
+  height: 2.6rem;
+  width: 100%;
+}
+
+.contact .contact-container .contact-row .input-wrapper .input-data input {
+  font-size: 1.3rem;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 2px solid silver;
+  outline: none;
+}
+
+.contact .contact-container .contact-row .input-wrapper .input-data input:focus ~ label,
+.contact .contact-container .contact-row .input-wrapper .input-data input:valid ~ label {
+  -webkit-transform: translateY(-1.4rem);
+          transform: translateY(-1.4rem);
+}
+
+.contact .contact-container .contact-row .input-wrapper .input-data input:focus ~ .under-line,
+.contact .contact-container .contact-row .input-wrapper .input-data input:valid ~ .under-line {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.contact .contact-container .contact-row .input-wrapper .input-data label {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.contact .contact-container .contact-row .input-wrapper .input-data .under-line {
+  position: absolute;
+  bottom: 0px;
+  height: 2px;
+  width: 100%;
+  background: salmon;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.contact .contact-container .textarea {
+  position: relative;
+  width: 100%;
+  padding-bottom: 2rem;
+}
+
+.contact .contact-container .textarea textarea {
+  width: 100%;
+  height: 10rem;
+  padding: 0.5rem;
+  outline: none;
+  border: solid 2px silver;
+  background: rgba(0, 0, 0, 0);
+  font-size: 1.2rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.contact .contact-container .textarea textarea:focus, .contact .contact-container .textarea textarea:valid {
+  border: 2px solid salmon;
+}
+
+.contact .contact-container .btn-wrapper {
+  width: 8rem;
+  height: 3rem;
+  border: 2px solid silver;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.contact .contact-container .btn-wrapper a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 1.2rem;
+  color: #000;
+  line-height: 2.8rem;
+  z-index: 2;
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.contact .contact-container .btn-wrapper .btn-inner {
+  width: 8rem;
+  height: 3rem;
+  top: 0;
+  left: -8rem;
+  background: salmon;
+  position: absolute;
+  z-index: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.contact .contact-container .btn-wrapper:hover .btn-inner {
+  left: 0;
+}
+
+.contact .contact-container .btn-wrapper:hover a {
+  color: #fff;
+}
+
+footer {
+  height: 8rem;
+  background: #000;
+}
+
+footer p {
+  font-size: 1.2rem;
+  font-family: "Modak", cursive;
+  color: #fff;
+}
+
+@media (min-width: 560px) {
+  html {
+    font-size: 16px;
+  }
+  .vision .vision-texts {
+    width: 75%;
+  }
+}
+
+@media (min-width: 960px) {
+  html {
+    font-size: 16px;
+  }
+  header {
+    padding: 1.7rem 2.4rem;
+  }
+  header h1 {
+    margin: 0;
+  }
+  header nav .nav-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header nav .nav-items li {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+  }
+  header nav .nav-items li a {
+    color: #fff;
+    font-size: 2rem;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+  }
+  header nav .nav-items li:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  header.sticky {
+    padding: 0.5rem 2rem;
+    background: rgba(255, 255, 255, 0.4);
+  }
+  header.sticky h1 {
+    font-size: 2.5rem;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+  }
+  header.sticky ul li a {
+    font-size: 1.5rem;
+  }
+  .profile .profile-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .profile .profile-container .img-wrapper {
+    margin: 0;
+  }
+  .profile .profile-container .profile-text {
+    margin: 0;
+    padding-left: 2rem;
+  }
+  .hobby .hobby-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 70%;
+  }
+  .hobby .hobby-container .hobby-content {
+    width: 30%;
+    height: 20rem;
+  }
+  .contact .contact-container {
+    width: 70%;
+  }
+  .contact .contact-container .contact-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .contact .contact-container .contact-row .input-wrapper {
+    width: 45%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

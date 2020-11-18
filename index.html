@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>Hiroto's portfolio</h1>
+    <nav>
+      <ul class="nav-items">
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#hobby">Hobby</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="heading flex">
+      <div class="heading-container fadeIn">
+        <i class="fas fa-hands-helping"></i>
+        <h2>HIROTO</h2>
+        <p>This is my first portfolio</p>
+      </div>
+    </section>
+    
+    <section class="profile" id="profile">
+      <div class="section-title flex fadeIn">
+        <h2>Profile</h2>
+      </div>
+      <div class="profile-container flex fadeIn">
+        <div class="img-wrapper">
+          <img src="./img/IMG_4629.JPG" alt="私の画像です">
+        </div>
+        <div class="profile-text">
+          <h3>小林大斗</h3>
+          <h4>Kobayashi Hiroto</h4>
+          <p>愛知県出身の文系大学生です</p>
+          <p>地方で一人暮らしをしています</p>
+        </div>
+      </div>
+    </div>
+    </section>
+    <section class="hobby" id="hobby">
+      <div class="section-title flex fadeIn">
+        <h2>My hobby</h2>
+      </div>
+      <div class="hobby-container flex fadeIn">
+        <div class="hobby-content">
+          <h3>読書</h3>
+          <p>高校二年生の秋ごろから小説を中心に読書をするようになりました。
+            今は忙しくてあまり読む時間がありませんが、おすすめの本があったらぜひ教えて下さい。</p>
+        </div>
+        <div class="hobby-content">
+          <h3>スポーツ観戦</h3>
+          <p>小学生のころからサッカーをしていましたが、今では自分でやるよりも見るほうが好きです。
+            地元が名古屋なので、一番好きなチームは名古屋グランパスです。</p>
+        </div>
+        <div class="hobby-content">
+          <h3>ラジオ</h3>
+          <p>もともとバナナマンが好きだったことがきっかけで、ラジオを聞き始めました。
+            今では三つほどの番組を中心に毎週聞いています。
+            </p>
+        </div>
+      </div>
+    </section>
+  
+    <section class="vision" id="vision">
+      <div class="section-title flex fadeIn">
+        <h2>Vision</h2>
+      </div>
+      <div class="vision-texts">
+        <h3 class="fadeIn">将来の夢はフルスタックなエンジニアになること</h3>
+        <div class="vision-p-container fadeIn">
+          <p>僕は今まで、将来についての想像があまりできませんでした。</p>
+          <p>特にやりたいこともない、ましてや将来の夢なんて...</p>
+          <p>しかしながら大学生になってプログラミングと出会い、</p>
+          <p>WEBエンジニアという職業を知りました。</p>
+          <p>最後の大会はベンチ外、受験は第一志望落ち</p>
+          <p>そんな僕だけど今度こそは達成して見せます。</p>
+          <p>そして日本中の、いや世界中の人達が利用するようなサービスの開発に携わりたいです。</p>
+          <p>この夢を現実にできるように頑張ります！</p>
+        </div>
+      </div>
+    </section>
+  
+    <section class="contact" id="contact">
+      <div class="section-title flex fadeIn">
+        <h2>Contact</h2>
+      </div>
+      <div class="contact-container fadeIn">
+        <div class="contact-row">
+          <div class="input-wrapper">
+            <div class="input-data">
+              <input type="text" required>
+              <div class="under-line"></div>
+              <label>お名前(漢字)</label>
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <div class="input-data">
+              <input type="text" required>
+              <div class="under-line"></div>
+              <label>おなまえ(ふりがな)</label>
+            </div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="input-wrapper">
+            <div class="input-data">
+              <input type="text" required>
+              <div class="under-line"></div>
+              <label>メールアドレス</label>
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <div class="input-data">
+              <input type="text" required>
+              <div class="under-line"></div>
+              <label>電話番号</label>
+            </div>
+          </div>
+        </div>
+        <div class="textarea">
+          <label>メッセージ</label>
+          <textarea required></textarea>
+        </div>
+        <div class="btn-wrapper">
+          <div class="btn-inner"></div>
+          <a href="#">送信</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="flex">
+    <p>kobayashi hiroto</p>
+  </footer>
+
+  <script>
+    'use strict';
+    window.addEventListener('scroll', function() {
+       const header = document.querySelector('header');
+       header.classList.toggle('sticky', scrollY > 0);
+    });
+
+
+  </script>
+  <script>
+    $(window).on('load scroll', function (){
+
+      var box = $('.fadeIn');
+      var animated = 'animated';
+
+      box.each(function(){
+
+        var boxOffset = $(this).offset().top;
+        var scrollPos = $(window).scrollTop();
+        var wh = $(window).height();
+
+        //画面内のどの位置で処理を実行するかで「100」の値を変更
+        if(scrollPos > boxOffset - wh + 100 ){
+          $(this).addClass(animated);
+        }
+      });
+
+    });
+  </script>
+</body>
+</html>

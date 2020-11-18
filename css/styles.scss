@@ -1,0 +1,446 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+$main-background: #000;
+$key-color: salmon;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 9px;
+}
+body {
+  font-family: "Noto Sans JP";
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-title {
+  padding: 1.3rem 0;
+  h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    &::first-letter {
+      color: $key-color;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      border: solid 2px $key-color;
+      width: 60%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
+}
+.fadeIn {
+  transition: 1s;
+  opacity: 0;
+  transform: translateY(50px);
+}
+.fadeIn.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+// <============header==============>
+header {
+  padding: 4rem 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $main-background;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  transition: 0.5s;
+  h1 {
+    color: #fff;
+    font-size: 3rem;
+    transition: 0.5s;
+    margin: 0 auto;
+  }
+  .nav-items {
+    display: none;
+  }
+
+  &.sticky {
+    padding: 2rem 2rem;
+    background: rgba($color: #fff, $alpha: 0.4);
+    h1 {
+      font-size: 2.5rem;
+      transition: 0.5s;
+    }
+    a {
+      font-size: 1rem;
+    }
+  }
+}
+// <===========heading=============>
+.heading {
+  padding-top: 5rem;
+  height: 100vh;
+  width: 100%;
+  background-image: url(../img/heading.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: rgba($color: #fff, $alpha: 0.85);
+  i {
+    font-size: 15rem;
+  }
+  h2 {
+    font-family: "Modak", cursive;
+    font-size: 5rem;
+  }
+  p {
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+  }
+}
+
+// <===========profile============>
+
+.profile {
+  padding: 4rem 0 8rem;
+  background: $main-background;
+  .profile-container {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    .img-wrapper {
+      margin: 2rem auto;
+      width: 23rem;
+      height: 23rem;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+    .profile-text {
+      color: #fff;
+      margin: 0 auto;
+      h3 {
+        text-align: center;
+        letter-spacing: 0.4rem;
+        font-size: 3rem;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          border: solid 1.5px #444;
+          width: 40%;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+        }
+      }
+      h4 {
+        text-align: center;
+        font-size: 1.3rem;
+        letter-spacing: 0.2rem;
+        padding-bottom: 1.5rem;
+      }
+      p {
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+    }
+  }
+}
+// <===========hobby=============>
+.hobby {
+  width: 100%;
+  padding: 4rem 0;
+  background-image: url(../img/hobby.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 10%;
+  .hobby-container {
+    padding-top: 2rem;
+    width: 70%;
+    flex-direction: column;
+    margin: 0 auto;
+    .hobby-content {
+      width: 80%;
+      height: 15rem;
+      padding: 1rem;
+      margin-top: 1rem;
+      background: rgba($color: #fff, $alpha: 0.85);
+      h3 {
+        text-align: center;
+        font-size: 1.6rem;
+        line-height: 3rem;
+      }
+      p {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+      }
+    }
+  }
+}
+
+// <===========vision=============>
+
+.vision {
+  padding: 5.5rem 0 5rem;
+  background: $main-background;
+  color: #fff;
+  width: 100%;
+  .vision-texts {
+    padding-top: 2.6rem;
+    text-align: center;
+    width: 85%;
+    margin: 0 auto;
+    h3 {
+      color: $key-color;
+      font-size: 2rem;
+      line-height: 4rem;
+      padding-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 2rem;
+      &:nth-child(7) {
+        padding-top: 2rem;
+      }
+    }
+  }
+}
+
+// <===========contact============>
+
+.contact {
+  background-image: url(../img/header.jfif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 4rem;
+  .contact-container {
+    width: 85%;
+    margin: 2rem auto 0;
+    padding: 5rem 4rem;
+    background: rgba($color: #fff, $alpha: 0.85);
+    .contact-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      .input-wrapper {
+        width: 100%;
+        margin-bottom: 3rem;
+        position: relative;
+        .input-data {
+          height: 2.6rem;
+          width: 100%;
+          input {
+            font-size: 1.3rem;
+            width: 100%;
+            height: 100%;
+            border: none;
+            background-color: rgba($color: #000, $alpha: 0);
+            border-bottom: 2px solid silver;
+            outline: none;
+            &:focus ~ label,
+            &:valid ~ label {
+              transform: translateY(-1.4rem);
+            }
+            &:focus ~ .under-line,
+            &:valid ~ .under-line {
+              transform: scaleX(1);
+            }
+          }
+          label {
+            position: absolute;
+            bottom: 1rem;
+            left: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+          }
+          .under-line {
+            position: absolute;
+            bottom: 0px;
+            height: 2px;
+            width: 100%;
+            background: $key-color;
+            transform: scaleX(0);
+            transition: all ease 0.3s;
+          }
+        }
+      }
+    }
+    .textarea {
+      position: relative;
+      width: 100%;
+      padding-bottom: 2rem;
+      textarea {
+        width: 100%;
+        height: 10rem;
+        padding: 0.5rem;
+        outline: none;
+        border: solid 2px silver;
+        background: rgba($color: #000, $alpha: 0);
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+        &:focus,
+        &:valid {
+          border: 2px solid $key-color;
+        }
+      }
+    }
+    .btn-wrapper {
+      width: 8rem;
+      height: 3rem;
+      border: 2px solid silver;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto;
+      a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        font-size: 1.2rem;
+        color: #000;
+        line-height: 2.8rem;
+        z-index: 2;
+        position: relative;
+        transition: 0.5s;
+      }
+      .btn-inner {
+        width: 8rem;
+        height: 3rem;
+        top: 0;
+        left: -8rem;
+        background: $key-color;
+        position: absolute;
+        z-index: 1;
+        transition: 0.5s;
+      }
+      &:hover {
+        .btn-inner {
+          left: 0;
+        }
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+// <==========footer============>
+footer {
+  height: 8rem;
+  background: $main-background;
+  p {
+    font-size: 1.2rem;
+    font-family: "Modak", cursive;
+    color: #fff;
+  }
+}
+
+@media (min-width: 560px) {
+  html {
+    font-size: 16px;
+  }
+  .vision {
+    .vision-texts {
+      width: 75%;
+    }
+  }
+}
+@media (min-width: 960px) {
+  html {
+    font-size: 16px;
+  }
+  header {
+    padding: 1.7rem 2.4rem;
+    h1 {
+      margin: 0;
+    }
+    nav {
+      .nav-items {
+        display: flex;
+        li {
+          display: inline-block;
+          padding: 1rem 1.5rem;
+          transition: 0.7s;
+          a {
+            color: #fff;
+            font-size: 2rem;
+            transition: 0.7s;
+          }
+          &:hover {
+            background-color: rgba($color: #fff, $alpha: 0.4);
+          }
+        }
+      }
+    }
+    &.sticky {
+      padding: 0.5rem 2rem;
+      background: rgba($color: #fff, $alpha: 0.4);
+      h1 {
+        font-size: 2.5rem;
+        transition: 0.7s;
+      }
+      ul {
+        li {
+          a {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  .profile {
+    .profile-container {
+      display: flex;
+      .img-wrapper {
+        margin: 0;
+      }
+      .profile-text {
+        margin: 0;
+        padding-left: 2rem;
+      }
+    }
+  }
+  .hobby {
+    .hobby-container {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 70%;
+      .hobby-content {
+        width: 30%;
+        height: 20rem;
+      }
+    }
+  }
+  .contact {
+    .contact-container {
+      width: 70%;
+      .contact-row {
+        flex-direction: row;
+        .input-wrapper {
+          width: 45%;
+        }
+      }
+    }
+  }
+}
