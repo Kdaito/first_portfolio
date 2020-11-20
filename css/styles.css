@@ -317,6 +317,31 @@ header.sticky a {
 .contact .contact-container .contact-row .input-wrapper .input-data {
   height: 2.6rem;
   width: 100%;
+  position: relative;
+}
+
+.contact .contact-container .contact-row .input-wrapper .input-data:focus-within::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+}
+
+.contact .contact-container .contact-row .input-wrapper .input-data::after {
+  position: absolute;
+  content: "";
+  bottom: 1px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: salmon;
+  z-index: 5;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
 }
 
 .contact .contact-container .contact-row .input-wrapper .input-data input {
@@ -335,12 +360,6 @@ header.sticky a {
           transform: translateY(-1.4rem);
 }
 
-.contact .contact-container .contact-row .input-wrapper .input-data input:focus ~ .under-line,
-.contact .contact-container .contact-row .input-wrapper .input-data input:valid ~ .under-line {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-}
-
 .contact .contact-container .contact-row .input-wrapper .input-data label {
   position: absolute;
   bottom: 1rem;
@@ -348,18 +367,6 @@ header.sticky a {
   pointer-events: none;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-}
-
-.contact .contact-container .contact-row .input-wrapper .input-data .under-line {
-  position: absolute;
-  bottom: 0px;
-  height: 2px;
-  width: 100%;
-  background: salmon;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: all ease 0.3s;
-  transition: all ease 0.3s;
 }
 
 .contact .contact-container .textarea {
@@ -380,7 +387,7 @@ header.sticky a {
   transition: all 0.3s ease;
 }
 
-.contact .contact-container .textarea textarea:focus, .contact .contact-container .textarea textarea:valid {
+.contact .contact-container .textarea textarea:focus {
   border: 2px solid salmon;
 }
 
@@ -533,7 +540,7 @@ footer p {
   }
   .contact .contact-container {
     width: 70%;
-    padding: 3rem 4rem;
+    padding: 5rem 4rem 3rem;
   }
   .contact .contact-container .contact-row {
     -webkit-box-orient: horizontal;

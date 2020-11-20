@@ -251,6 +251,24 @@ header {
         .input-data {
           height: 2.6rem;
           width: 100%;
+          position: relative;
+          &:focus-within::after {
+            transform: scaleX(1);
+            transform-origin: right top;
+          }
+          &::after {
+            position: absolute;
+            content: "";
+            bottom: 1px;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background:$key-color;
+            z-index: 5;
+            transform: scaleX(0);
+            transform-origin: left top;
+            transition: all ease .3s;
+          }
           input {
             font-size: 1.3rem;
             width: 100%;
@@ -263,10 +281,6 @@ header {
             &:valid ~ label {
               transform: translateY(-1.4rem);
             }
-            &:focus ~ .under-line,
-            &:valid ~ .under-line {
-              transform: scaleX(1);
-            }
           }
           label {
             position: absolute;
@@ -274,15 +288,6 @@ header {
             left: 0;
             pointer-events: none;
             transition: all 0.3s ease;
-          }
-          .under-line {
-            position: absolute;
-            bottom: 0px;
-            height: 2px;
-            width: 100%;
-            background: $key-color;
-            transform: scaleX(0);
-            transition: all ease 0.3s;
           }
         }
       }
@@ -300,8 +305,7 @@ header {
         background: rgba($color: #000, $alpha: 0);
         font-size: 1.2rem;
         transition: all 0.3s ease;
-        &:focus,
-        &:valid {
+        &:focus {
           border: 2px solid $key-color;
         }
       }
@@ -453,7 +457,7 @@ footer {
     background-image: url(../img/header.jfif);
     .contact-container {
       width: 70%;
-      padding: 3rem 4rem;
+      padding: 5rem 4rem 3rem;
       .contact-row {
         flex-direction: row;
         .input-wrapper {
