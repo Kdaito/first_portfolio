@@ -93,7 +93,7 @@ header {
   padding-top: 5rem;
   height: 100vh;
   width: 100%;
-  background-image: url(../img/newheader.jpg);
+  background-image: url(../img/iphonesize-heading.jfif);
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
@@ -170,7 +170,7 @@ header {
 .hobby {
   width: 100%;
   padding: 4rem 0;
-  background-image: url(../img/hobby.jpg);
+  background-image: url(../img/iphonesize-hobby.jfif);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 10%;
@@ -230,7 +230,7 @@ header {
 // <===========contact============>
 
 .contact {
-  background-image: url(../img/header.jfif);
+  background-image: url(../img/iphonesize-contact.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 4rem;
@@ -412,6 +412,9 @@ footer {
       }
     }
   }
+  .heading {
+    background-image: url(../img/newheader.jpg)
+  }
   .profile {
     .profile-container {
       display: flex;
@@ -425,6 +428,7 @@ footer {
     }
   }
   .hobby {
+    background-image: url(../img/hobby.jpg);
     .hobby-container {
       flex-direction: row;
       justify-content: space-between;
@@ -446,8 +450,10 @@ footer {
     }
   }
   .contact {
+    background-image: url(../img/header.jfif);
     .contact-container {
       width: 70%;
+      padding: 3rem 4rem;
       .contact-row {
         flex-direction: row;
         .input-wrapper {
