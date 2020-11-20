@@ -6,9 +6,14 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+<<<<<<< HEAD
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Modak&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+=======
+  
+>>>>>>> origin/master
 </head>
+  
 <body>
   <header>
     <h1>Hiroto's portfolio</h1>
@@ -52,18 +57,18 @@
       <div class="section-title flex fadeIn">
         <h2>My hobby</h2>
       </div>
-      <div class="hobby-container flex fadeIn">
-        <div class="hobby-content">
+      <div class="hobby-container flex">
+        <div class="hobby-content fadeIn">
           <h3>読書</h3>
           <p>高校二年生の秋ごろから小説を中心に読書をするようになりました。
             今は忙しくてあまり読む時間がありませんが、おすすめの本があったらぜひ教えて下さい。</p>
         </div>
-        <div class="hobby-content">
+        <div class="hobby-content fadeIn">
           <h3>スポーツ観戦</h3>
           <p>小学生のころからサッカーをしていましたが、今では自分でやるよりも見るほうが好きです。
             地元が名古屋なので、一番好きなチームは名古屋グランパスです。</p>
         </div>
-        <div class="hobby-content">
+        <div class="hobby-content fadeIn">
           <h3>ラジオ</h3>
           <p>もともとバナナマンが好きだったことがきっかけで、ラジオを聞き始めました。
             今では三つほどの番組を中心に毎週聞いています。
@@ -155,6 +160,7 @@
       // getElementsByClassName で、fadein のクラスを持つ要素を取得し配列として保持
       var fadeinClass= Array.prototype.slice.call(document.getElementsByClassName("fadeIn"));
 
+<<<<<<< HEAD
       // 配列の数だけ処理を行う
         fadeinClass.forEach(function( element ) {
 
@@ -177,6 +183,34 @@
         });
     }
 
+=======
+    function fadeinEvent() {
+      // getElementsByClassName で、fadein のクラスを持つ要素を取得し配列として保持
+      var fadeinClass= Array.prototype.slice.call(document.getElementsByClassName("fadeIn"));
+
+      // 配列の数だけ処理を行う
+        fadeinClass.forEach(function( element ) {
+
+            // getBoundingClientRect で要素の位置や幅や高さなどを取得
+            var boundingClientRect = element.getBoundingClientRect();
+
+            // スクロールの位置情報（html のスクロールがなければ、body のスクロール）を取得
+            var scroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+            // ブラウザウィンドウの ビューポートの高さ
+            var windowHeight = window.innerHeight;
+
+            // スクロールの位置が、フェードインしたい要素の位置にいるかどうか判定する
+            if (scroll > scroll + boundingClientRect.top - windowHeight + 200){
+
+                // 要素を表示する場合は、要素の透明度を無くし、Y方向の移動距離を無くす。これで表示される
+                element.style.opacity = "1";
+                element.style.transform = "translateY(0)";
+            }
+        });
+    }
+
+>>>>>>> origin/master
       // 画面がロードされたときに行う処理を記載
     window.onload = function(){
         // 画面が中途半端なスクロール位置でリロードされても表示するべきものが表示されるようにするため、ロードですぐに呼び出す
@@ -185,8 +219,12 @@
         // スクロールしたら動くエベントとして用意しておく。スクロールするたびに動くようにする
         window.addEventListener('scroll', fadeinEvent, false);
     }
+<<<<<<< HEAD
 
   </script> 
+=======
+  </script>
+>>>>>>> origin/master
   
 </body>
 </html>
