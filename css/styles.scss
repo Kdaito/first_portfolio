@@ -8,7 +8,7 @@ $key-color: salmon;
 }
 html {
   scroll-behavior: smooth;
-  font-size: 9px;
+  font-size: 12px;
 }
 body {
   font-family: "Noto Sans JP";
@@ -61,7 +61,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: $main-background;
+  background-color: rgba($color: #000, $alpha: 0);
   position: fixed;
   width: 100%;
   z-index: 99;
@@ -93,7 +93,7 @@ header {
   padding-top: 5rem;
   height: 100vh;
   width: 100%;
-  background-image: url(../img/heading.jpg);
+  background-image: url(../img/newheader.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
@@ -104,9 +104,10 @@ header {
   h2 {
     font-family: "Modak", cursive;
     font-size: 5rem;
+    font-weight: 100;
   }
   p {
-    font-size: 2rem;
+    font-size: 1.7rem;
     letter-spacing: 0.3rem;
     font-weight: 600;
   }
@@ -175,12 +176,12 @@ header {
   background-position: 10%;
   .hobby-container {
     padding-top: 2rem;
-    width: 70%;
+    width: 85%;
     flex-direction: column;
     margin: 0 auto;
     .hobby-content {
       width: 80%;
-      height: 15rem;
+      height: 21rem;
       padding: 1rem;
       margin-top: 1rem;
       background: rgba($color: #fff, $alpha: 0.85);
@@ -190,7 +191,7 @@ header {
         line-height: 3rem;
       }
       p {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         line-height: 1.8rem;
       }
     }
@@ -211,13 +212,14 @@ header {
     margin: 0 auto;
     h3 {
       color: $key-color;
-      font-size: 2rem;
+      font-size: 2.2rem;
       line-height: 4rem;
       padding-bottom: 0.5rem;
     }
     p {
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       line-height: 2rem;
+      text-align: start;
       &:nth-child(7) {
         padding-top: 2rem;
       }
@@ -233,9 +235,9 @@ header {
   background-repeat: no-repeat;
   padding: 4rem;
   .contact-container {
-    width: 85%;
+    width: 95%;
     margin: 2rem auto 0;
-    padding: 5rem 4rem;
+    padding: 3.5rem 1.2rem;
     background: rgba($color: #fff, $alpha: 0.85);
     .contact-row {
       display: flex;
@@ -350,7 +352,7 @@ footer {
   height: 8rem;
   background: $main-background;
   p {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     font-family: "Modak", cursive;
     color: #fff;
   }
@@ -429,6 +431,13 @@ footer {
       .hobby-content {
         width: 30%;
         height: 20rem;
+      }
+    }
+  }
+  .vision {
+    .vision-texts {
+      p {
+        text-align: center;
       }
     }
   }

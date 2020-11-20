@@ -8,7 +8,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 9px;
+  font-size: 12px;
 }
 
 body {
@@ -86,7 +86,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0);
   position: fixed;
   width: 100%;
   z-index: 99;
@@ -125,7 +125,7 @@ header.sticky a {
   padding-top: 5rem;
   height: 100vh;
   width: 100%;
-  background-image: url(../img/heading.jpg);
+  background-image: url(../img/newheader.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
@@ -139,10 +139,11 @@ header.sticky a {
 .heading h2 {
   font-family: "Modak", cursive;
   font-size: 5rem;
+  font-weight: 100;
 }
 
 .heading p {
-  font-size: 2rem;
+  font-size: 1.7rem;
   letter-spacing: 0.3rem;
   font-weight: 600;
 }
@@ -219,7 +220,7 @@ header.sticky a {
 
 .hobby .hobby-container {
   padding-top: 2rem;
-  width: 70%;
+  width: 85%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -229,7 +230,7 @@ header.sticky a {
 
 .hobby .hobby-container .hobby-content {
   width: 80%;
-  height: 15rem;
+  height: 21rem;
   padding: 1rem;
   margin-top: 1rem;
   background: rgba(255, 255, 255, 0.85);
@@ -242,7 +243,7 @@ header.sticky a {
 }
 
 .hobby .hobby-container .hobby-content p {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   line-height: 1.8rem;
 }
 
@@ -262,14 +263,15 @@ header.sticky a {
 
 .vision .vision-texts h3 {
   color: salmon;
-  font-size: 2rem;
+  font-size: 2.2rem;
   line-height: 4rem;
   padding-bottom: 0.5rem;
 }
 
 .vision .vision-texts p {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   line-height: 2rem;
+  text-align: start;
 }
 
 .vision .vision-texts p:nth-child(7) {
@@ -284,9 +286,9 @@ header.sticky a {
 }
 
 .contact .contact-container {
-  width: 85%;
+  width: 95%;
   margin: 2rem auto 0;
-  padding: 5rem 4rem;
+  padding: 3.5rem 1.2rem;
   background: rgba(255, 255, 255, 0.85);
 }
 
@@ -431,7 +433,7 @@ footer {
 }
 
 footer p {
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   font-family: "Modak", cursive;
   color: #fff;
 }
@@ -512,6 +514,9 @@ footer p {
   .hobby .hobby-container .hobby-content {
     width: 30%;
     height: 20rem;
+  }
+  .vision .vision-texts p {
+    text-align: center;
   }
   .contact .contact-container {
     width: 70%;
