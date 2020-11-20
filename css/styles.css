@@ -456,6 +456,7 @@ footer p {
   }
   header h1 {
     margin: 0;
+    font-size: 2.6rem;
   }
   header nav .nav-items {
     display: -webkit-box;
@@ -470,7 +471,7 @@ footer p {
   }
   header nav .nav-items li a {
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.4rem;
     -webkit-transition: 0.7s;
     transition: 0.7s;
   }
@@ -482,12 +483,12 @@ footer p {
     background: rgba(255, 255, 255, 0.4);
   }
   header.sticky h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     -webkit-transition: 0.7s;
     transition: 0.7s;
   }
   header.sticky ul li a {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .profile .profile-container {
     display: -webkit-box;
@@ -514,6 +515,9 @@ footer p {
   .hobby .hobby-container .hobby-content {
     width: 30%;
     height: 20rem;
+  }
+  .hobby .hobby-container .hobby-content p {
+    font-size: 1.4rem;
   }
   .vision .vision-texts p {
     text-align: center;

@@ -376,6 +376,7 @@ footer {
     padding: 1.7rem 2.4rem;
     h1 {
       margin: 0;
+      font-size: 2.6rem;
     }
     nav {
       .nav-items {
@@ -386,7 +387,7 @@ footer {
           transition: 0.7s;
           a {
             color: #fff;
-            font-size: 2rem;
+            font-size: 1.4rem;
             transition: 0.7s;
           }
           &:hover {
@@ -399,13 +400,13 @@ footer {
       padding: 0.5rem 2rem;
       background: rgba($color: #fff, $alpha: 0.4);
       h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         transition: 0.7s;
       }
       ul {
         li {
           a {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
           }
         }
       }
@@ -431,6 +432,9 @@ footer {
       .hobby-content {
         width: 30%;
         height: 20rem;
+        p {
+          font-size: 1.4rem;
+        }
       }
     }
   }
